@@ -1,0 +1,4 @@
+#.htaccess, ��ȻҲ����д��httpd.conf
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* index.php

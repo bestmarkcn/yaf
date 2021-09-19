@@ -1,0 +1,10 @@
+{
+    "name" : "bestmark/yaf",
+    "description" : "yaf + yar",
+    "require": {
+        "php" : "^7.2",
+        "illuminate/database": "^8.61",
+        "catfan/medoo": "^2.1",
+        "symfony/var-dumper": "^5.3"
+    }
+}
