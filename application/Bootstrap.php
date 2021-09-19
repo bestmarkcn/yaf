@@ -42,10 +42,6 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
             )
         );
         $routes->addRoute('user',$router);
-        //var_dump($routes);
-        //$routes->addConfig(Yaf\Registry::get("config")->routes);
-        //var_dump(Yaf\Registry::get("config")->routes);
-        //var_dump($routes);
 	}
 	
 	public function _initView(Yaf\Dispatcher $dispatcher) {
@@ -81,6 +77,11 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
     public function _initSmarty(Yaf\Dispatcher $dispatcher){
         $smarty = new Smarty_Adapter(null , Yaf\Application::app()->getConfig()->smarty);
         Yaf\Dispatcher::getInstance()->setView($smarty);
+    }
+
+    public function _initCache(Yaf\Dispatcher $dispatcher){
+        $yac = new Yac();
+        Yaf\Registry::set('_yac', $yac);
     }
 
 

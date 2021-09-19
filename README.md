@@ -1,7 +1,11 @@
 # yaf测试项目
 
-###涉及技术
-yaf + yar + opcache + medoo + smarty
+###组件
+- yar(yaf作者写的轻量级rpc框架)  
+- yac(yaf作者写的缓存组件)  
+- opcache 
+- medoo 
+- smarty
 
 ###yar
 - ####扩展地址
