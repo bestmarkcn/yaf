@@ -82,6 +82,12 @@ class Bootstrap extends Yaf\Bootstrap_Abstract {
     public function _initCache(Yaf\Dispatcher $dispatcher){
         $yac = new Yac();
         Yaf\Registry::set('_yac', $yac);
+
+        $redis = new Predis\Client(array(
+            'host'   => '127.0.0.1',
+            'port'   => 6379,
+        ));
+        Yaf\Registry::set('_redis', $redis);
     }
 
 

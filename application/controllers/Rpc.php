@@ -9,6 +9,8 @@ class RpcController extends Yaf\Controller_Abstract
     public function serverAction(){
         //yac缓存
         Yaf\Registry::get('_yac')->set('user_id', 666);
+        //redis缓存
+        Yaf\Registry::get('_redis')->set('redis_test', 888);
 
         $server = new \Yar_Server(new \Api\YarApiTest());
         $server->handle();
