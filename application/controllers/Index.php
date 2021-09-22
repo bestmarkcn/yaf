@@ -66,8 +66,6 @@ class IndexController extends Yaf\Controller_Abstract {
     }
 
     public function rpcClientLoopAction(){
-
-
         $url = 'http://yaf.test/index/Rpc/Server';
         Yar_Concurrent_Client::call($url, "api", array("parameters"), null);
         Yar_Concurrent_Client::call($url, "api", array("parameters"), null);
